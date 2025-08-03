@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Mods for Forge 1.20.1 Server</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&amp;display=swap" rel="stylesheet"/>
-<style>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>Zach's Mod Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet"/>
+  <style>
     :root {
       --bg-color: #121212;
       --card-color: rgba(30, 30, 30, 0.85);
@@ -19,16 +18,17 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      font-family: var(--font-family);
     }
 
     body {
       background: url('https://i.imgur.com/j9FvgjU.png') no-repeat center center fixed;
       background-size: cover;
       color: var(--text-color);
-      font-family: var(--font-family);
       line-height: 1.6;
       padding: 2rem;
       position: relative;
+      overflow-x: hidden;
     }
 
     body::before {
@@ -40,6 +40,60 @@
       height: 100vh;
       background-color: rgba(0, 0, 0, 0.7);
       z-index: -1;
+    }
+
+    .topbar-wrapper {
+      position: fixed;
+      top: -60px;
+      left: 0;
+      width: 100%;
+      background: rgba(18, 18, 18, 0.95);
+      padding: 0.5rem 2rem;
+      display: flex;
+      justify-content: flex-start;
+      gap: 1.5rem;
+      z-index: 10;
+      transition: top 0.3s ease;
+      font-family: var(--font-family);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    }
+
+    .topbar-wrapper:hover,
+    body:hover .topbar-wrapper {
+      top: 0;
+    }
+
+    .topbar-button {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      background: none;
+      padding: 0.2rem 0.5rem;
+      transition: transform 0.2s ease;
+    }
+
+    .topbar-button:hover {
+      transform: scale(1.1);
+      text-shadow: 0 0 6px var(--accent-color);
+    }
+
+    .tab-content {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: all 0.5s ease;
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+      opacity: 1;
+      transform: translateX(0);
     }
 
     .banner {
@@ -70,7 +124,6 @@
       left: 50%;
       transform: translate(-50%, -50%);
       color: #fff;
-      font-family: 'Orbitron', sans-serif;
       font-size: 2.5rem;
       background: rgba(0, 0, 0, 0.6);
       padding: 1rem 2rem;
@@ -99,6 +152,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 1rem;
+      justify-content: center;
     }
 
     .mod {
@@ -129,26 +183,97 @@
       background-color: #4a1c1c !important;
     }
 
-    @media (max-width: 600px) {
-      .banner-text {
-        font-size: 1.5rem;
-        padding: 0.5rem 1rem;
-      }
+    .coming-soon {
+      max-width: 1000px;
+      margin: 8rem auto;
+      background-color: var(--card-color);
+      padding: 4rem;
+      border-radius: 1rem;
+      text-align: center;
+      font-size: 2rem;
+      color: var(--text-color);
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease, text-shadow 0.3s ease;
+    }
 
-      .mod-list {
-        grid-template-columns: 1fr;
-      }
+    .coming-soon:hover {
+      transform: scale(1.03);
+      text-shadow: 0 0 8px var(--accent-color);
+      color: var(--accent-color);
+    }
+
+    .home-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .home-buttons button {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      background-color: var(--accent-color);
+      color: #000;
+      border-radius: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .home-buttons button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 8px var(--accent-color);
+    }
+
+    .home-title {
+      text-align: center;
+      margin-top: 5rem;
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      text-shadow: 2px 2px 6px black;
     }
   </style>
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => {
+        tab.classList.remove('active');
+        tab.style.display = 'none';
+      });
+
+      const target = document.getElementById(tabId);
+      target.style.display = 'block';
+      setTimeout(() => {
+        target.classList.add('active');
+      }, 10); // triggers transition
+    }
+
+    window.onload = () => showTab('home-tab');
+  </script>
 </head>
 <body>
-<a class="banner" href="https://drive.google.com/drive/folders/1MJfQQQ-uK6wxzncge43R_pRG8A1neU8B?usp=drive_link" target="_blank">
-<img alt="Client Mods Banner" src="https://i.imgur.com/ZmyvO1C.jpeg"/>
-<div class="banner-text">Client Mods</div>
-</a>
-<h1>Mods needed for Forge 1.20.1 Server (47.4.0)</h1>
-<p class="note">The mod boxes colored red are the new mods!</p>
-<div class="mod-list">
+  <div class="topbar-wrapper">
+    <button class="topbar-button" onclick="showTab('home-tab')">HOME</button>
+    <button class="topbar-button" onclick="showTab('active-tab')">Active Server</button>
+    <button class="topbar-button" onclick="showTab('future-tab')">Future Servers...</button>
+  </div>
+
+  <div id="home-tab" class="tab-content active">
+    <h1 class="home-title">Welcome to Zach's Mod Portal!</h1>
+    <div class="home-buttons">
+      <button onclick="showTab('active-tab')">Go to Active Server</button>
+      <button onclick="showTab('future-tab')">See Future Servers</button>
+    </div>
+  </div>
+
+  <div id="active-tab" class="tab-content">
+    <a class="banner" href="https://drive.google.com/drive/folders/1MJfQQQ-uK6wxzncge43R_pRG8A1neU8B?usp=drive_link" target="_blank">
+      <img alt="Client Mods Banner" src="https://i.imgur.com/ZmyvO1C.jpeg"/>
+      <div class="banner-text">Client Mods</div>
+    </a>
+    <h1>Mods needed for Forge 1.20.1 Server (47.4.0)</h1>
+    <p class="note">The mod boxes colored red are the new mods!</p>
+    <div class="mod-list">
 <div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/alexs-mobs" style="color: inherit; text-decoration: underline;" target="_blank">Alex’s Mobs</a></div><div class="version">1.22.9</div></div>
 <div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/alternate-current" style="color: inherit; text-decoration: underline;" target="_blank">Alternate Current</a></div><div class="version">1.7.0</div></div>
 <div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/autochefs-delight" style="color: inherit; text-decoration: underline;" target="_blank">Autochef’s Delight</a></div><div class="version">1.0.7</div></div>
@@ -226,7 +351,13 @@
 <div class="mod new-mod"><div class="mod-name"><a href="https://modrinth.com/mod/when-dungeons-arise-seven-seas" style="color: inherit; text-decoration: underline;" target="_blank">When Dungeons Arise: Seven Seas</a></div><div class="version">1.0.2</div></div>
 <div class="mod new-mod"><div class="mod-name"><a href="https://modrinth.com/datapack/deeper-oceans" style="color: inherit; text-decoration: underline;" target="_blank">Deeper Oceans</a></div><div class="version">2.0.0</div></div>
 <div class="mod new-mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/thalassophobia" style="color: inherit; text-decoration: underline;" target="_blank">Thalassophobia</a></div><div class="version">1.4.3</div></div>
+    </div>
+  </div>
 
-</div>
+  <div id="future-tab" class="tab-content">
+    <div class="coming-soon">
+      Future servers will be listed here soon...
+    </div>
+  </div>
 </body>
 </html>
