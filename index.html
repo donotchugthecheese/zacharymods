@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Mods for Forge 1.20.1 Server</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-color: #121212;
+      --card-color: rgba(30, 30, 30, 0.85);
+      --text-color: #f1f1f1;
+      --accent-color: #00ffae;
+      --font-family: 'Orbitron', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: url('https://i.imgur.com/j9FvgjU.png') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text-color);
+      font-family: var(--font-family);
+      line-height: 1.6;
+      padding: 2rem;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: -1;
+    }
+
+    .banner {
+      display: block;
+      margin: 0 auto 2rem auto;
+      text-align: center;
+      position: relative;
+      max-width: 1000px;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .banner:hover {
+      transform: scale(1.02);
+    }
+
+    .banner img {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      text-shadow: 2px 2px 8px #000;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      color: var(--accent-color);
+      text-shadow: 1px 1px 6px black;
+    }
+
+    .note {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-bottom: 2rem;
+    }
+
+    .mod-list {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .mod {
+      background-color: var(--card-color);
+      padding: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: transform 0.2s ease;
+      backdrop-filter: blur(4px);
+    }
+
+    .mod:hover {
+      transform: scale(1.03);
+    }
+
+    .mod-name {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .version {
+      color: #bbb;
+      font-size: 0.9rem;
+    }
+
+    .new-mod {
+      background-color: #4a1c1c !important;
+    }
+
+    @media (max-width: 600px) {
+      .banner-text {
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+      }
+
+      .mod-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+<a class="banner" href="https://drive.google.com/drive/folders/1MJfQQQ-uK6wxzncge43R_pRG8A1neU8B?usp=drive_link" target="_blank">
+<img alt="Client Mods Banner" src="https://i.imgur.com/ZmyvO1C.jpeg"/>
+<div class="banner-text">Client Mods</div>
+</a>
+<h1>Mods needed for Forge 1.20.1 Server (47.4.0)</h1>
+<p class="note">The mod boxes colored red are the new mods!</p>
+<div class="mod-list">
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/alexs-mobs" style="color: inherit; text-decoration: underline;" target="_blank">Alex’s Mobs</a></div><div class="version">1.22.9</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/alternate-current" style="color: inherit; text-decoration: underline;" target="_blank">Alternate Current</a></div><div class="version">1.7.0</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/autochefs-delight" style="color: inherit; text-decoration: underline;" target="_blank">Autochef’s Delight</a></div><div class="version">1.0.7</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/better-pvp-mod" style="color: inherit; text-decoration: underline;" target="_blank">Better PvP</a></div><div class="version">25.2.10</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/better-villages" style="color: inherit; text-decoration: underline;" target="_blank">Better Villages</a></div><div class="version">3.3.1</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/blue-skies" style="color: inherit; text-decoration: underline;" target="_blank">Blue Skies</a></div><div class="version">1.3.31</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/cataclysm" style="color: inherit; text-decoration: underline;" target="_blank">Cataclysm</a></div><div class="version">2.64</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/cultural-delights" style="color: inherit; text-decoration: underline;" target="_blank">Cultural Delights</a></div><div class="version">0.16.5</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/dungeons-and-taverns" style="color: inherit; text-decoration: underline;" target="_blank">Dungeons and Taverns</a></div><div class="version">3.0.3.f</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/farmers-delight" style="color: inherit; text-decoration: underline;" target="_blank">Farmer’s Delight</a></div><div class="version">1.2.8</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/guard-villagers" style="color: inherit; text-decoration: underline;" target="_blank">Guard Villagers</a></div><div class="version">1.6.11</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/incendium" style="color: inherit; text-decoration: underline;" target="_blank">Incendium</a></div><div class="version">5.3.5</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/miners-delight" style="color: inherit; text-decoration: underline;" target="_blank">Miner’s Delight</a></div><div class="version">1.2.3</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/mowzies-mobs" style="color: inherit; text-decoration: underline;" target="_blank">Mowzie’s Mobs</a></div><div class="version">1.7.3</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/natures-delight" style="color: inherit; text-decoration: underline;" target="_blank">Nature’s Delight</a></div><div class="version">1.10</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/oh-the-biomes-youll-go" style="color: inherit; text-decoration: underline;" target="_blank">Oh The Biomes We’ve Gone</a></div><div class="version">1.6.2</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/origins" style="color: inherit; text-decoration: underline;" target="_blank">Origins</a></div><div class="version">1.10.0.9</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/oceans-delight" style="color: inherit; text-decoration: underline;" target="_blank">Oceans Delight</a></div><div class="version">1.0.2</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/tpa" style="color: inherit; text-decoration: underline;" target="_blank">TPA++</a></div><div class="version">1.6.0</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/travelers-titles" style="color: inherit; text-decoration: underline;" target="_blank">Traveler’s Titles</a></div><div class="version">4.0.2</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/waystones" style="color: inherit; text-decoration: underline;" target="_blank">Waystones</a></div><div class="version">14.1.16</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/yungs-api" style="color: inherit; text-decoration: underline;" target="_blank">Yung’s API</a></div><div class="version">4.0.6</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/yungs-better-end-island" style="color: inherit; text-decoration: underline;" target="_blank">Yung’s Better End Island</a></div><div class="version">2.0.6</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/balm" style="color: inherit; text-decoration: underline;" target="_blank">Balm</a></div><div class="version">7.3.33</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/bookshelf" style="color: inherit; text-decoration: underline;" target="_blank">Bookshelf</a></div><div class="version">20.2.13</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/caelus" style="color: inherit; text-decoration: underline;" target="_blank">Caelus</a></div><div class="version">3.2.0</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/citadel" style="color: inherit; text-decoration: underline;" target="_blank">Citadel</a></div><div class="version">2.6.2</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/curios" style="color: inherit; text-decoration: underline;" target="_blank">Curios</a></div><div class="version">5.14.1</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/geckolib" style="color: inherit; text-decoration: underline;" target="_blank">Geckolib</a></div><div class="version">4.7.3</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/libraryferret" style="color: inherit; text-decoration: underline;" target="_blank">LibraryFerret</a></div><div class="version">4.0.0</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/lionfishapi" style="color: inherit; text-decoration: underline;" target="_blank">LionfishAPI</a></div><div class="version">2.4</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/ice-and-fire-dragons" style="color: inherit; text-decoration: underline;" target="_blank">Ice and Fire: Dragons</a></div><div class="version">2.1.13 Beta 5</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/mythic-mounts" style="color: inherit; text-decoration: underline;" target="_blank">Mythic Mounts</a></div><div class="version">7.4.2</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/terrablender" style="color: inherit; text-decoration: underline;" target="_blank">TerraBlender</a></div><div class="version">3.0.1.10</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/kotlin-for-forge" style="color: inherit; text-decoration: underline;" target="_blank">Kotlin for Forge</a></div><div class="version">4.11.0</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/oh-the-trees-youll-grow" style="color: inherit; text-decoration: underline;" target="_blank">Oh The Trees You'll Grow</a></div><div class="version">1.3.13</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/architectury-api" style="color: inherit; text-decoration: underline;" target="_blank">Architectury</a></div><div class="version">9.2.14</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/placebo" style="color: inherit; text-decoration: underline;" target="_blank">Placebo</a></div><div class="version">8.6.3</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/corgilib" style="color: inherit; text-decoration: underline;" target="_blank">CorgiLib</a></div><div class="version">4.0.3.4</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/gobber" style="color: inherit; text-decoration: underline;" target="_blank">Gobber2</a></div><div class="version">2.8.9</div></div>
+<div class="mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat" style="color: inherit; text-decoration: underline;" target="_blank">Simple Voice Chat</a></div><div class="version">2.5.35</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://modrinth.com/mod/distant-friends" style="color: inherit; text-decoration: underline;" target="_blank">Distant Friends</a></div><div class="version">0.5.5</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://modrinth.com/mod/what-are-they-up-to" style="color: inherit; text-decoration: underline;" target="_blank">What Are They Up To</a></div><div class="version">1.2.3</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://modrinth.com/mod/coroutil" style="color: inherit; text-decoration: underline;" target="_blank">CoroUtils</a></div><div class="version">1.3.7</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/towns-and-towers" style="color: inherit; text-decoration: underline;" target="_blank">Towns and Towers</a></div><div class="version">1.12</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://modrinth.com/datapack/tectonic/" style="color: inherit; text-decoration: underline;" target="_blank">Tectonic</a></div><div class="version">2.4.1</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/the-twilight-forest" style="color: inherit; text-decoration: underline;" target="_blank">Twilight Forest</a></div><div class="version">4.3.2508</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/bosses-of-mass-destruction-forge" style="color: inherit; text-decoration: underline;" target="_blank">Bosses of Mass Destruction [Forge | NeoForge]</a></div><div class="version">1.1.2</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/the-graveyard-forge/" style="color: inherit; text-decoration: underline;" target="_blank">The Graveyard</a></div><div class="version">3.1</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://modrinth.com/mod/valhelsia-structures/" style="color: inherit; text-decoration: underline;" target="_blank">Valhesia Structures</a></div><div class="version">1.1.2</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://modrinth.com/mod/divinerpg/" style="color: inherit; text-decoration: underline;" target="_blank">DivineRPG</a></div><div class="version">1.10.4</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/quark" style="color: inherit; text-decoration: underline;" target="_blank">Quark</a></div><div class="version">4.0-462</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://modrinth.com/mod/zeta/" style="color: inherit; text-decoration: underline;" target="_blank">Zeta</a></div><div class="version">1.0-30</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://modrinth.com/mod/supplementaries/" style="color: inherit; text-decoration: underline;" target="_blank">Supplementaries</a></div><div class="version">3.1.36</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://modrinth.com/mod/moonlight" style="color: inherit; text-decoration: underline;" target="_blank">Moonlight Lib</a></div><div class="version">2.14.13</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/explorify-dungeons-forge" style="color: inherit; text-decoration: underline;" target="_blank">Explorify</a></div><div class="version">1.6.2</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://modrinth.com/datapack/tidal-towns" style="color: inherit; text-decoration: underline;" target="_blank">Tidal Towns</a></div><div class="version">1.3.4</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/yungs-bridges" style="color: inherit; text-decoration: underline;" target="_blank">YUNG's Bridges</a></div><div class="version">4.0.3</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/yungs-better-nether-fortresses" style="color: inherit; text-decoration: underline;" target="_blank">YUNG's Better Nether Fortresses</a></div><div class="version">2.0.6</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/yungs-better-mineshafts" style="color: inherit; text-decoration: underline;" target="_blank">YUNG's Better Mineshafts</a></div><div class="version">4.0.4</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/yungs-better-dungeons" style="color: inherit; text-decoration: underline;" target="_blank">YUNG's Better Dungeons</a></div><div class="version">4.0.4</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/yungs-better-jungle-temples" style="color: inherit; text-decoration: underline;" target="_blank">YUNG's Better Jungle Temples</a></div><div class="version">2.0.5</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/yungs-better-witch-huts" style="color: inherit; text-decoration: underline;" target="_blank">YUNG's Better Witch Huts</a></div><div class="version">3.0.3</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/yungs-better-strongholds" style="color: inherit; text-decoration: underline;" target="_blank">YUNG's Better Strongholds</a></div><div class="version">4.0.3</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/yungs-cave-biomes" style="color: inherit; text-decoration: underline;" target="_blank">YUNG's Cave Biomes</a></div><div class="version">2.0.5</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/yungs-extras" style="color: inherit; text-decoration: underline;" target="_blank">YUNG's Extras</a></div><div class="version">4.0.3</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://modrinth.com/mod/sparsestructures" style="color: inherit; text-decoration: underline;" target="_blank">Sparse Structures</a></div><div class="version">3.0</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://modrinth.com/mod/female-gender" style="color: inherit; text-decoration: underline;" target="_blank">Female Gender Mod</a></div><div class="version">3.0.1</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://modrinth.com/mod/aquamirae" style="color: inherit; text-decoration: underline;" target="_blank">Aquamirae 6</a></div><div class="version">API 15</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://modrinth.com/mod/obscure-api" style="color: inherit; text-decoration: underline;" target="_blank">Obscure API</a></div><div class="version">15</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/horseinboat" style="color: inherit; text-decoration: underline;" target="_blank">HorseInBoat</a></div><div class="version">1.1.4</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://modrinth.com/mod/shineals-prehistoric-expansion" style="color: inherit; text-decoration: underline;" target="_blank">ShineaL's Prehistoric Expansion</a></div><div class="version">1.4.2</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://modrinth.com/datapack/terralith" style="color: inherit; text-decoration: underline;" target="_blank">Terralith</a></div><div class="version">2.5.4</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/when-dungeons-arise" style="color: inherit; text-decoration: underline;" target="_blank">When Dungeons Arise</a></div><div class="version">2.1.58</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://modrinth.com/mod/when-dungeons-arise-seven-seas" style="color: inherit; text-decoration: underline;" target="_blank">When Dungeons Arise: Seven Seas</a></div><div class="version">1.0.2</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://modrinth.com/datapack/deeper-oceans" style="color: inherit; text-decoration: underline;" target="_blank">Deeper Oceans</a></div><div class="version">2.0.0</div></div>
+<div class="mod new-mod"><div class="mod-name"><a href="https://www.curseforge.com/minecraft/mc-mods/thalassophobia" style="color: inherit; text-decoration: underline;" target="_blank">Thalassophobia</a></div><div class="version">1.4.3</div></div>
+
+</div>
+</body>
+</html>
