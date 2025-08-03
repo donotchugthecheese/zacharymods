@@ -232,6 +232,29 @@
       color: var(--accent-color);
       text-shadow: 2px 2px 6px black;
     }
+
+.music-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--accent-color);
+  color: #000;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  font-family: var(--font-family);
+  box-shadow: 0 0 10px var(--accent-color);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  z-index: 100;
+}
+
+.music-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px var(--accent-color);
+}
+
   </style>
   <script>
     function showTab(tabId) {
@@ -251,6 +274,36 @@
     window.onload = () => showTab('home-tab');
   </script>
 </head>
+<audio id="bgMusic" autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<button class="music-button" onclick="toggleMusic()">🎵 Toggle Music</button>
+
+<script>
+  const music = document.getElementById("bgMusic");
+  let isPlaying = true;
+
+  function toggleMusic() {
+    if (music.paused) {
+      music.play();
+      isPlaying = true;
+    } else {
+      music.pause();
+      isPlaying = false;
+    }
+  }
+
+  // Try autoplay after user interaction
+  document.addEventListener('DOMContentLoaded', () => {
+    const playOnInteraction = () => {
+      if (music.paused) music.play().catch(() => {});
+      document.removeEventListener('click', playOnInteraction);
+    };
+    document.addEventListener('click', playOnInteraction);
+  });
+</script>
 <body>
   <div class="topbar-wrapper">
     <button class="topbar-button" onclick="showTab('home-tab')">HOME</button>
